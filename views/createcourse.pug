@@ -1,0 +1,35 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title HOME PAGE
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')
+.container
+  // naya wala
+  h1.center-align.cyan-text.text-darken-1 CREATE COURSE FORM
+  br
+  .container.center-align(style='border: 1px solid rgb(184, 180, 180); padding: 3%;')
+    form(runat='server' action='/createcourse' method='POST' enctype='multipart/form-data')
+      img#blah(width='50%')
+      .input-field.col.s6
+        label(for='textInputtext1') Course Name
+        input#textInputtext1.form-control(type='text' aria-describedby='emailHelp' name='coursename')
+      .input-field
+        label(for='desc1') Course Description
+        textarea#desc1.form-control(type='text' aria-describedby='emailHelp' name='description')
+      .input-field
+        label(for='prereq1') Course Prerequisites
+        textarea#prereq1.form-control(type='text' aria-describedby='emailHelp' name='prerequisites')
+      .input-field
+        label(for='hours1') Completion Hours
+        input#hours1.form-control(type='text' aria-describedby='emailHelp' name='hours')
+      .file-field.btn
+        | Add Video
+        input#imgInp.btn(type='file' name='video' accept='video/*')
+      br
+      h5.grey-text.text-darken-1.note Note: This post is can be viewed by everyone! :)
+      div(align='center')
+        button.waves-effect.waves-light.btn.btn-info.blue.darken-2(type='submit') Upload
+script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
+script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js' integrity='sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV' crossorigin='anonymous')
